@@ -1,4 +1,4 @@
-import express, { Router } from 'express';
+import express, { type Router } from 'express';
 import db from '../utils/db.js';
 import renderHTML from '../utils/render.js';
 

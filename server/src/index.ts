@@ -1,10 +1,10 @@
-import express from 'express';
+import express, { type Express } from 'express';
 import userRouter from './routes/user.js';
 import { createUserTable } from './models/user.js';
 
 createUserTable();
 
-const app = express();
+const app: Express = express();
 
 app.use(express.json());
 app.use((req, res, next) => {
@@ -17,6 +17,4 @@ app.get('/', (req, res) => {
   res.send('Hello World!');
 });
 
-app.listen(8080, () => {
-  console.log('Server is running on port http://localhost:8080');
-});
+export default app;
