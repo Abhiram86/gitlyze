@@ -17,4 +17,6 @@ app.get('/', (req, res) => {
   res.send('Hello World!');
 });
 
-export default app;
+app.listen(process.env.PORT || 8080, () => {
+  console.log(`Server is running on port ${process.env.PORT || 8080}`);
+});
